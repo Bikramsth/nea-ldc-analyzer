@@ -240,7 +240,7 @@ def process_excel(file):
 # Streamlit Web Interface
 # ==========================================
 st.set_page_config(page_title="NEA LDC Load Analyzer", layout="wide")
-st.title("⚡ NEA LDC Monthly Peak Load Analyzer")
+st.title("NEA LDC Monthly Peak Load Analyzer")
 
 init_db()
 
@@ -441,4 +441,5 @@ if not db_df.empty:
     st.download_button(label="📥 Download Database as Excel", data=buffer.getvalue(),
                        file_name="nea_ldc_historical_peaks.xlsx")
 else:
+
     st.write("No historical data found. Please upload an Excel file to begin.")
